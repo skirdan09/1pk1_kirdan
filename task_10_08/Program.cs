@@ -1,0 +1,22 @@
+﻿namespace Task_11_01
+{
+    internal class Program
+    {//*Передача по значению: Напишите метод, который принимает два целых числа и меняет их
+     //местами.Проверьте, изменились ли значения переменных вне метода
+        static void Main(string[] args)
+        {
+            int a = 10;
+            int b = 20;
+            Switch (ref a, ref b);
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+        }
+
+        private static void Switch(ref int a, ref int b)
+        {
+            int c = a;
+            a = b;
+            b = c;
+        }
+    }
+}
